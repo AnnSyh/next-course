@@ -1,0 +1,11 @@
+$primary-color: #64ff00;
+$secondary-color: blue;
+
+$soho-font: 'Sono', sans-serif;
+
+:export {
+  primaryColor: $primary-color;
+  secondaryColor: $secondary-color;
+
+  sohoFont: $soho-font;  
+}

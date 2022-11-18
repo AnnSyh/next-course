@@ -1,0 +1,26 @@
+@import './variables.module.scss';
+
+html, 
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $soho-font;
+}
+
+a {
+  color: $secondary-color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
