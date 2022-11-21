@@ -1,3 +1,3 @@
-export interface MyTitle {
+export interface AboutTitle {
   title: string
 }

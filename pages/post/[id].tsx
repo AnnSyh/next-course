@@ -5,11 +5,11 @@ import { useRouter } from 'next/router'
 import { NextPageContext } from 'next'
 import { MyPost } from '../../interfaces/post'
 
-interface PostsPageProps {
+interface PostPageProps {
   post: MyPost
 }
 
-export default function Post({ post: serverPost }: PostsPageProps) {
+export default function Post({ post: serverPost }: PostPageProps) {
   const [post, setPost] = useState(serverPost)
   const router = useRouter()
 

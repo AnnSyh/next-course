@@ -3,9 +3,15 @@ import Image from 'next/image'
 import React from 'react'
 import styles from '../styles/About.module.css'
 import Router from 'next/router'
+import { NextPageContext } from 'next'
 import MainLayout from '../../components/MainLayout'
+import { AboutTitle } from '../../interfaces/title'
 
-export default function About({title}) {
+interface AboutPageProps {
+  title: AboutTitle
+}
+
+export default function About({title}: AboutPageProps) {
 
   const linkClickHandler = () => {
     Router.push('/')
@@ -13,7 +19,8 @@ export default function About({title}) {
 
   return (
     <MainLayout title={'About page'}>
-      <h1>{title}</h1>
+      <h1>{title.title}</h1>
+      {/* <h1>{title}</h1> */}
 
       <button onClick={linkClickHandler}>Go back to home</button>
       <button onClick={() => Router.push('/posts')}>Go  to posts</button>
@@ -22,11 +29,17 @@ export default function About({title}) {
   )
 }
 
-About.getInitialProps = async () => {
-  const response = await fetch('http://localhost:4200/about')
-  const data = await response.json()
+interface AboutNextPageContext extends NextPageContext {
+  query:{
+    title: string
+  }
+}
+
+About.getInitialProps = async ({ query, req }: AboutNextPageContext) => {
+  const response = await fetch(`http://localhost:4200/about`)
+  const title: AboutTitle = await response.json()
 
   return {
-    title: data.title
+    title: title
   }
 }
