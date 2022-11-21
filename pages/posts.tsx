@@ -25,7 +25,7 @@ export default function Posts({ posts: serverPosts }: PostsPageProps) {
     if (!serverPosts) {
       load()
     }
-  }, [])
+  })
 
   if (!posts) {
     return <MainLayout>

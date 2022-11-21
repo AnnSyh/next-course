@@ -23,7 +23,7 @@ export default function Post({ post: serverPost }: PostPageProps) {
     if (!serverPost) {
       load()
     }
-  }, [])
+  })
 
   if (!post) {
     return <MainLayout>
