@@ -18,7 +18,7 @@ export default function Posts({ posts: serverPosts }: PostsPageProps) {
   useEffect(() => {
     async function load() {
       // const response = await fetch(`${process.env.API_URL}/posts`)
-      const response =  await fetch(`https://jsonplaceholder.typicode.com/posts`)
+      const response =  await fetch(`${process.env.API_URL_JSON}/posts`)
       const json = await response.json()
       setPosts(json)
     }
@@ -65,7 +65,7 @@ Posts.getInitialProps = async ({ req }: NextPageContext) => {
   }
 
   // const response = await fetch(`${process.env.API_URL}/posts`)
-  const response = await fetch(`https://jsonplaceholder.typicode.com/posts`)
+  const response = await fetch(`${process.env.API_URL_JSON}/posts`)
   const posts: MyPost[] = await response.json()
 
   return {
