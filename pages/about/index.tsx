@@ -19,8 +19,8 @@ export default function About({title}: AboutPageProps) {
 
   return (
     <MainLayout title={'About page'}>
-      <h1>{title.title}</h1>
-      {/* <h1>{title}</h1> */}
+      <h1>Страница about</h1>
+      {/* <h1>{title.title}</h1> */}
       {/* <h1>{process.env.API_URL}</h1> */}
 
       <button onClick={linkClickHandler}>Go back to home</button>
@@ -30,17 +30,17 @@ export default function About({title}: AboutPageProps) {
   )
 }
 
-interface AboutNextPageContext extends NextPageContext {
-  query:{
-    title: string
-  }
-}
+// interface AboutNextPageContext extends NextPageContext {
+//   query:{
+//     title: string
+//   }
+// }
 
-About.getInitialProps = async ({ query, req }: AboutNextPageContext) => {
-  const response = await fetch(`${process.env.API_URL}/about`)
-  const title: AboutTitle = await response.json()
+// About.getInitialProps = async ({ query, req }: AboutNextPageContext) => {
+//   const response = await fetch(`${process.env.API_URL}/about`)
+//   const title: AboutTitle = await response.json()
 
-  return {
-    title: title
-  }
-}
+//   return {
+//     title: title
+//   }
+// }
