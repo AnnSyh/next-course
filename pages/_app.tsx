@@ -1,4 +1,5 @@
-import NextNProgress from 'nextjs-progressbar';
+// import NextNProgress from 'nextjs-progressbar';
+import NextNProgress from '../node_modules/nextjs-progressbar';
 import '../styles/globals.scss';
 import variables from '../styles/variables.module.scss';
 
