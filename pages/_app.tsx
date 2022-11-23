@@ -1,19 +1,16 @@
-// import NextNProgress from 'nextjs-progressbar';
-import NextNProgress from '../node_modules/nextjs-progressbar';
+import Router from 'next/router';
+import nProgress from 'nprogress';
 import '../styles/globals.scss';
+import '../styles/nprogress.css';
 import variables from '../styles/variables.module.scss';
 
+Router.events.on('routeChangeStart', nProgress.start);
+Router.events.on('routeChangeError', nProgress.done);
+Router.events.on('routeChangeComplete', nProgress.done);
 
 export default function App({ Component, pageProps }:any) {
   return (
     <div style={{ color: variables.primaryColor }}>
-      <NextNProgress
-        color="#64ff00"
-        startPosition={0.3}
-        stopDelayMs={200}
-        height={3}
-        showOnShallow={true}
-      />
       <Component {...pageProps} />
     </div>
   )

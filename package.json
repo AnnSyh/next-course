@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "serve": "concurrently \"npm run dev\" \"npm run mock\" ", 
+    "serve": "concurrently \"npm run dev\" \"npm run mock\" ",
     "mock": "json-server -w db.json -p 4200 -d 1750"
   },
   "dependencies": {
@@ -17,11 +17,13 @@
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.3",
     "next": "13.0.3",
+    "nprogress": "^0.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "4.9.3"
   },
   "devDependencies": {
+    "@types/nprogress": "^0.2.0",
     "concurrently": "^7.5.0",
     "sass": "^1.56.1"
   }
