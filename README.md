@@ -1,8 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## О чём проект?
+- учебный проект по курсу
+- NextJS Быстрый Курс - SSR на React JS
+- https://www.youtube.com/watch?v=_EOrSmjdOZQ&list=PLl3oaK4Vu0Y-58jbSrBxZtAs3z7fw7b5x&index=12
+
+## Установка и запуск
+- npm i - установка зависимостей
+- npm run start - запуск сервера
+- npm run build - запуск сборки проекта
+- npm run dev - запуск проекта
+
+##### Просмотр
+[https://next-course-three-sigma.vercel.app/](https://next-course-three-sigma.vercel.app/)
+
+## Функциональность:
+- роутинг по стр /, /about, /posts
+- /posts - вывод списка постов с [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com/posts)
+- индикатор загрузки стр;
+- pages\_document.tsx - подключение шрифтов здесь(работа в рамках всего приложения )
+- pages\_app.tsx - подключение глоб стилей
+
+#Создание API мок сервера [https://github.com/typicode/json-server](https://github.com/typicode/json-server)
+- db.json - в корне проекта
+- npm run mock - запуск мокового сервера
+
+#Создание API 
+- pages\api\echo.tsx - свой api по адресу http://localhost:3000/api/echo
+- pages\api\echo\[id].tsx - запрос на динамический адрес например 43  http://localhost:3000/api/echo/43
+- 
+
+## SEO:
+- components\MainLayout.tsx - файл с общими метатегами(работа в рамках layout-та)
+- разные title для разных стр
+- стр 404
+
+
+## Используемые технологии:
+- NextJS
+- Typescript
 
 ## Getting Started
 
-First, run the development server:
 
 ```bash
 npm run dev
